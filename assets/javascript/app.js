@@ -8,3 +8,24 @@
 // 8) The end screen displays the results: correct answers, incorrect and the unanswered. There's also a button to play again.
 // 9) On the end screen our timer is stopped, the screen wont change unless the player clicks the "play again" button.
 // 10) If the player clicks the "play again" button the game re-initializes, it DOES NOT reset.
+
+$("#question-container").hide();
+var gameisStarted = false;
+
+// When player clicks start
+$("#start-button").on("click", function() {
+    //Flip game started flag
+    gameisStarted = true;
+    // Hide instructions
+    $("#instructions-container").hide();
+    // Display Questions
+    $("#question-container").show();
+})
+
+// During gameplay make the list items clickable
+if (gameisStarted = true) {
+    // Make list items clickable
+    $("li").on("click", function() {
+        alert("clicked!")
+    })
+}

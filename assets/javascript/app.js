@@ -14,6 +14,28 @@ $("#question-container").hide();
 $("#timer-container").hide();
 var gameisStarted = false;
 
+// Answers go in as objects within an array
+var question1 = {
+    prompt: "The color _____ is named after a battle fought in Italy in the 1800's",
+    answerA: "Fuchsia",
+    answerB: "Magenta",
+    answerC: "Capri",
+    answerD: "Olivine",
+}
+var questionArray = [
+    question1,
+]
+
+console.log(question1.answerA);
+console.log(questionArray[0])
+
+// DOM links for questions & answers
+$("#random-question").text(questionArray[0].prompt);
+$("#answer-A").text(questionArray[0].answerA);
+$("#answer-B").text(questionArray[0].answerB);
+$("#answer-C").text(questionArray[0].answerC);
+$("#answer-D").text(questionArray[0].answerD)
+
 // Timer Variables
 var clockRunning = false;
 var time = 30;
@@ -51,6 +73,7 @@ function timeConverter(t) {
     var minutes = Math.floor(t / 60);
     var seconds = t - (minutes * 60);
 
+    // if time runs out lose condition
     if (seconds === 0) {
         stop();
         alert("ph no!");
@@ -89,3 +112,4 @@ if (gameisStarted = true) {
         alert("clicked!");
     })
 }
+

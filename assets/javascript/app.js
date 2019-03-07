@@ -36,7 +36,7 @@ function stop() {
 function count() {
 
     // DONE: increment time by 1, remember we cant use "this" here.
-    time++;
+    time--;
 
     // DONE: Get the current time, pass that into the timeConverter function,
     //       and save the result in a variable.

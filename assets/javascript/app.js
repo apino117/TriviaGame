@@ -45,7 +45,7 @@ var questionArray = [
     question5 = {
         prompt: "Coca-cola as per their agreements with the US government are given special permission to import _____ for the use in their signature-soft drink.",
         rightAnswer: "Coca Leaves",
-        wrongAnswer: ["Gluco-Amphetamine, an especially powerful sugar", "Concentrated Trimethylpurine-2,6-dione", "Un-pasturized coco beans"],
+        wrongAnswer: ["Gluco-Amphetamine, an especially powerful sugar", "Concentrated 1,3,7-Trimethylpurine-2,6-dione", "Un-pasturized coco beans"],
     },
 ]
 
@@ -94,7 +94,9 @@ function timeConverter(t) {
     // if time runs out lose condition
     if (seconds === 0) {
         stop();
-        alert("ph no!");
+        alert("Oh no, time ran out! Next question!");
+        incorrectAnswer++;
+        makeQuestion();
     }
     if (seconds < 10) {
         seconds = "0" + seconds;
@@ -113,6 +115,7 @@ function timerReset() {
 }
 
 function makeQuestion() {
+    start();
     if (questionCount === (questionArray.length)) {
         alert("that's it!");
         // Result Screen
@@ -153,21 +156,21 @@ if (gameisStarted = true) {
     // Make list items clickable
     $("#answer-B").on("click", function () {
         correctAnswer++;
-        alert("right");
+        alert("Correct!");
         makeQuestion();
     })
     $("#answer-A").on("click", function () {
-        alert("wrong");
+        alert("mmmmNope!");
         incorrectAnswer++;
         makeQuestion();
     })
     $("#answer-C").on("click", function () {
-        alert("wrong");
+        alert("Not that one!");
         incorrectAnswer++;
         makeQuestion();
     })
     $("#answer-D").on("click", function () {
-        alert("wrong");
+        alert("Lo siento, try again!");
         incorrectAnswer++;
         makeQuestion();
     })

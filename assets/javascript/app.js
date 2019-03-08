@@ -14,43 +14,29 @@ $("#question-container").hide();
 $("#timer-container").hide();
 var gameisStarted = false;
 
+// Timer Variables
+var clockRunning = false;
+var time = 30;
+
 // Answers go in as objects within an array
 var question1 = {
     prompt: "The color _____ is named after a battle fought in Italy in the 1800's",
-    answerA: "Fuchsia",
-    answerB: "Magenta",
-    answerC: "Capri",
-    answerD: "Olivine",
+    wrongAnswer: ["Fuchsia", "Capri", "Olivine"],
+    rightAnswer: "Magenta",
+
 }
 var question2 = {
     prompt: "Mozart once wrote a song for his mother which translates approximately to _____",
-    answerA: "Come lick my ass",
-    answerB: "I've got a dirty surprise for you",
-    answerC: "The wench who pleased herself",
-    answerD: "A country setting",
+    rightAnswer: "Lick me in the arse",
+    wrongAnswer: ["I've got a dirty surprise for you", "The wench who pleased herself", "A fine country setting"],
 }
 var questionArray = [
     question1,
     question2,
 ]
 
-// console.log(question1.answerA);
-// console.log(questionArray[0])
+var questionCount = 0;
 
-var randomQuestion = questionArray[Math.floor((Math.random() * questionArray.length))];
-console.log(randomQuestion);
-
-
-// DOM links for questions & answers
-$("#random-question").text(questionArray[0].prompt);
-$("#answer-A").text(questionArray[0].answerA);
-$("#answer-B").text(questionArray[0].answerB);
-$("#answer-C").text(questionArray[0].answerC);
-$("#answer-D").text(questionArray[0].answerD);
-
-// Timer Variables
-var clockRunning = false;
-var time = 30;
 
 // Timer Functions
 function start() {
@@ -59,6 +45,7 @@ function start() {
     if (!clockRunning) {
         intervalId = setInterval(count, 1000);
         clockRunning = true;
+        makeQuestion();
     }
 }
 function stop() {
@@ -102,6 +89,26 @@ function timeConverter(t) {
 
     return minutes + ":" + seconds;
 }
+function timerReset() {
+    time += (30 - time);
+}
+
+function makeQuestion() {
+    if (questionCount === 2) {
+        alert("that's it!");
+    }
+    else {
+        // DOM links for questions & answers
+        $("#random-question").text(questionArray[questionCount].prompt);
+        $("#answer-A").text(questionArray[questionCount].wrongAnswer[0]);
+        $("#answer-B").text(questionArray[questionCount].rightAnswer);
+        $("#answer-C").text(questionArray[questionCount].wrongAnswer[1]);
+        $("#answer-D").text(questionArray[questionCount].wrongAnswer[2]);
+        questionCount++;
+    }
+    timerReset();
+
+}
 
 // When player clicks start
 $("#start-button").on("click", function () {
@@ -120,7 +127,17 @@ $("#start-button").on("click", function () {
 // During gameplay functions
 if (gameisStarted = true) {
     // Make list items clickable
-    $("li").on("click", function () {
-        alert("clicked!");
+    $("#answer-B").on("click", function () {
+        alert("right");
+        makeQuestion();
+    })
+    $("#answer-A").on("click", function () {
+        alert("wrong");
+    })
+    $("#answer-C").on("click", function () {
+        alert("wrong");
+    })
+    $("#answer-D").on("click", function () {
+        alert("wrong");
     })
 }

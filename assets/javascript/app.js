@@ -12,6 +12,7 @@
 // Start Screen Variables
 $("#question-container").hide();
 $("#timer-container").hide();
+$("#results-container").hide();
 var gameisStarted = false;
 
 // Timer Variables
@@ -19,23 +20,41 @@ var clockRunning = false;
 var time = 30;
 
 // Answers go in as objects within an array
-var question1 = {
-    prompt: "The color _____ is named after a battle fought in Italy in the 1800's",
-    wrongAnswer: ["Fuchsia", "Capri", "Olivine"],
-    rightAnswer: "Magenta",
-
-}
-var question2 = {
-    prompt: "Mozart once wrote a song for his mother which translates approximately to _____",
-    rightAnswer: "Lick me in the arse",
-    wrongAnswer: ["I've got a dirty surprise for you", "The wench who pleased herself", "A fine country setting"],
-}
 var questionArray = [
-    question1,
-    question2,
+    question1 = {
+        prompt: "The color _____ is named after a battle fought in Italy in the 1800's",
+        wrongAnswer: ["Fuchsia", "Capri", "Olivine"],
+        rightAnswer: "Magenta",
+
+    },
+    question2 = {
+        prompt: "Mozart once wrote a song for his mother which translates approximately to _____",
+        rightAnswer: "Lick me in the arse",
+        wrongAnswer: ["I've got a dirty surprise for you", "The wench who pleased herself", "A fine country setting"],
+    },
+    question3 = {
+        prompt: "In Australia's history there's an event reffered to as The Great Emu War which was ________",
+        rightAnswer: "A war the Australians lost against the emus",
+        wrongAnswer: ["A war the emus fought amongst each other which caused mass destruction of the local towns and terrorized their citizens", "A brutal war over the hunting selling and trading of emu hide - the reason it's now illegal to trade in emu of any form.", "A span during the great depression where the government railed against any consumption of emu, making it wildly expensive and earning the title of war." ],
+    },
+    question4 = {
+        prompt: "How many dimples are on a regulation size golfball?",
+        rightAnswer: "336",
+        wrongAnswer: ["509", "234", "672"],
+    },
+    question5 = {
+        prompt: "Coca-cola as per their agreements with the US government are given special permission to import _____ for the use in their signature-soft drink.",
+        rightAnswer: "Coca Leaves",
+        wrongAnswer: ["Gluco-Amphetamine, an especially powerful sugar", "Concentrated Trimethylpurine-2,6-dione", "Un-pasturized coco beans"],
+    },
 ]
 
 var questionCount = 0;
+var correctAnswer = 0;
+var incorrectAnswer = 0;
+
+$("#wins-column").text("You got " + correctAnswer + " questions right!");
+$("#losses-column").text("You got " + incorrectAnswer + " questions wrong!");
 
 
 // Timer Functions
@@ -94,8 +113,13 @@ function timerReset() {
 }
 
 function makeQuestion() {
-    if (questionCount === 2) {
+    if (questionCount === (questionArray.length)) {
         alert("that's it!");
+        // Result Screen
+        $("#wins-column").text("You got " + correctAnswer + " question(s) right!");
+        $("#losses-column").text("You got " + incorrectAnswer + " question(s) wrong!");
+        $("#results-container").show();
+        stop();
     }
     else {
         // DOM links for questions & answers
@@ -128,16 +152,23 @@ $("#start-button").on("click", function () {
 if (gameisStarted = true) {
     // Make list items clickable
     $("#answer-B").on("click", function () {
+        correctAnswer++;
         alert("right");
         makeQuestion();
     })
     $("#answer-A").on("click", function () {
         alert("wrong");
+        incorrectAnswer++;
+        makeQuestion();
     })
     $("#answer-C").on("click", function () {
         alert("wrong");
+        incorrectAnswer++;
+        makeQuestion();
     })
     $("#answer-D").on("click", function () {
         alert("wrong");
+        incorrectAnswer++;
+        makeQuestion();
     })
 }

@@ -22,19 +22,31 @@ var question1 = {
     answerC: "Capri",
     answerD: "Olivine",
 }
+var question2 = {
+    prompt: "Mozart once wrote a song for his mother which translates approximately to _____",
+    answerA: "Come lick my ass",
+    answerB: "I've got a dirty surprise for you",
+    answerC: "The wench who pleased herself",
+    answerD: "A country setting",
+}
 var questionArray = [
     question1,
+    question2,
 ]
 
-console.log(question1.answerA);
-console.log(questionArray[0])
+// console.log(question1.answerA);
+// console.log(questionArray[0])
+
+var randomQuestion = questionArray[Math.floor((Math.random() * questionArray.length))];
+console.log(randomQuestion);
+
 
 // DOM links for questions & answers
 $("#random-question").text(questionArray[0].prompt);
 $("#answer-A").text(questionArray[0].answerA);
 $("#answer-B").text(questionArray[0].answerB);
 $("#answer-C").text(questionArray[0].answerC);
-$("#answer-D").text(questionArray[0].answerD)
+$("#answer-D").text(questionArray[0].answerD);
 
 // Timer Variables
 var clockRunning = false;
@@ -112,4 +124,3 @@ if (gameisStarted = true) {
         alert("clicked!");
     })
 }
-

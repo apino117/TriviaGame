@@ -1,0 +1,89 @@
+body {
+    color: whitesmoke;
+    /* Setting Background Image */
+    background-image: url("../images/asian-assorted-background-917371.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 96px;
+}
+
+#instructions-container, #tagline-text {
+    padding-top: 25px;
+}
+#content-container {
+    background: #ce3838;
+    border-radius: 25px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+}
+
+#button-container, #question-container, #timer-container {
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 15px;
+}
+
+.row {
+    align-items: flex-end;
+}
+
+h1 {
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    text-shadow: 2px 2px #3e0082;
+
+}
+
+h2, h3 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px #3e0082;
+}
+
+h4, li {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px #3e0082;
+}
+
+#random-question {
+    padding-bottom: 15px;
+}
+
+p {
+    margin-top: 25px;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+#audio-wrapper {
+    padding-right: 340px;
+}
+#copyright-text {
+    color: #fff8f8;
+    text-shadow: 2px 2px #00000085;
+    margin-left: 10px;
+    margin-top: 20px;
+}

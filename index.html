@@ -13,96 +13,103 @@
 </head>
 
 <body>
-
-    <!-- Title -->
-    <div class="container" id="title-container">
-        <div class="row" id="title-row">
-            <div class="col-12" id="title-column">
-                <h1>It's the "Useless Knowledge" Trivia Game!</h1>
-                <h3>The World's probably-not-onlyiest Trivia Game about weird random facts!</h3>
-            </div>
-        </div>
-    </div>
-    <!-- Instructions -->
-    <div class="container" id="instructions-container">
-        <div class="row" id="instructions-row">
-            <div class="col-12" id="instructions-column">
-                <h2>When you click start a question will appear, you have 30 seconds to answer! See what you learn!</h2>
-            </div>
-        </div>
-    </div>
-    <!-- Start Button -->
-    <div class="container" id="button-container">
-        <div class="row" id="button-row">
-            <div class="col-12" id="button-column">
-                <button type="button" class="btn btn-outline-secondary" id="start-button">Start</button>
-            </div>
-        </div>
-    </div>
-    <!-- Question Div -->
-    <div class="container" id="question-container">
-        <div class="row" id="question-row">
-            <div class="col-12" id="question-column">
-                <h4 id="random-question"></h4>
-                <!-- Multiple Choice Options -->
-                <ol id="answer-list">
-                    <li id="answer-A"></li>
-                    <li id="answer-B"></li>
-                    <li id="answer-C"></li>
-                    <li id="answer-D"></li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <!-- Timer Div -->
-    <div class="container" id="timer-container">
-        <div class="row" id="timer-row">
-            <div class="col-12" id="timer-column">
-                <h5 id="timer-text"></h5>
-            </div>
-        </div>
-    </div>
-    <!-- Answer Div -->
-    <div class="container" id="answer-container">
-        <div class="row" id="answer-row">
-            <div class="col-12" id="answer-column">
-                <h4></h4>
-                <img>
-            </div>
-        </div>
-    </div>
-    <!-- Results Screen -->
-    <div class="container" id="results-container">
-        <div class="row" id="results-row">
-            <div class="col-6" id="wins-column">
-
-            </div>
-            <div class="col-6" id="losses-column">
-
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
-        <small class="text-muted">
-            <div class="row">
-                <!-- Copyright Text -->
-                <div class="col-11">
-                    <p id="copyright-text">
-                        Copyright © AP Incorporated, 2019 - "Crystal Game Background Music" is an Original Composition
-                        by DJ
-                        Watcha
-                    </p>
-                </div>
-                <!-- Music -->
-                <div class="col-1" id="audio-wrapper">
-                    <audio id="bgMusic" controls>
-                        <source src="assets/" type="audio/mpeg">
-                    </audio>
+    <!-- Content Container -->
+    <div class="container" id="content-container">
+        <!-- Title -->
+        <div class="container" id="title-container">
+            <div class="row" id="title-row">
+                <div class="col-12" id="title-column">
+                    <h1>It's the "Useless Knowledge" Trivia Game!</h1>
+                    <h3 id="tagline-text">The World's probably-not-onlyiest Trivia Game about weird random facts!</h3>
                 </div>
             </div>
-        </small>
-    </footer>
+        </div>
+        <!-- Instructions -->
+        <div class="container" id="instructions-container">
+            <div class="row" id="instructions-row">
+                <div class="col-12" id="instructions-column">
+                    <h2>When you click start a question will appear, you have 30 seconds to answer! See what you learn!
+                        Some things you may know, some things may be new, nothing will have use in the real world!
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- Start Button -->
+        <div class="container" id="button-container">
+            <div class="row" id="button-row">
+                <div class="col-12" id="button-column">
+                    <button type="button" class="btn btn-info btn-lg" id="start-button">Start</button>
+                </div>
+            </div>
+        </div>
+        <!-- Question Div -->
+        <div class="container" id="question-container">
+            <div class="row" id="question-row">
+                <div class="col-12" id="question-column">
+                    <h4 id="random-question"></h4>
+                    <!-- Multiple Choice Options -->
+                    <ol id="answer-list">
+                        <li id="answer-A"></li>
+                        <li id="answer-B"></li>
+                        <li id="answer-C"></li>
+                        <li id="answer-D"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Timer Div -->
+        <div class="container" id="timer-container">
+            <div class="row" id="timer-row">
+                <div class="col-12" id="timer-column">
+                    <h2 id="timer-text"></h2>
+                </div>
+            </div>
+        </div>
+        <!-- Answer Div -->
+        <div class="container" id="answer-container">
+            <div class="row" id="answer-row">
+                <div class="col-12" id="answer-column">
+                    <h4></h4>
+                    <img>
+                </div>
+            </div>
+        </div>
+        <!-- Results Screen -->
+        <div class="container" id="results-container">
+            <div class="row" id="results-row">
+                <div class="col-6" id="wins-column">
+
+                </div>
+                <div class="col-6" id="losses-column">
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <small class="text-muted">
+                <div class="row">
+                    <!-- Copyright Text -->
+                    <div class="col-6">
+                        <p id="copyright-text">
+                            Copyright © AP Incorporated, 2019 - "The Useless Knowledge Trivia Game Background Music" is
+                            an
+                            Original Composition
+                            by DJ
+                            Watcha
+                        </p>
+                    </div>
+                    <!-- Music -->
+                    <div class="col-6" id="audio-wrapper">
+                        <audio id="bgMusic" controls>
+                            <source src="assets/" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </small>
+        </footer>
+    </div>
+
     <!-- Javascript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>

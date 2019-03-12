@@ -21,14 +21,16 @@ body {
     padding: 20px;
 }
 
-#button-container, #question-container, #timer-container {
+#button-container, #question-container, #timer-container, #results-container {
     text-align: center;
     padding-bottom: 25px;
     padding-top: 15px;
+    font-family: monospace;
+    font-size:25px;
 }
 
 .row {
-    align-items: flex-end;
+    align-items: center;
 }
 
 h1 {
@@ -74,9 +76,7 @@ p {
 /* Footer */
 
 .footer {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+    position: relative;
 }
 #audio-wrapper {
     padding-right: 340px;

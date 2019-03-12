@@ -25,6 +25,7 @@ var questionArray = [
         prompt: "The color _____ is named after a battle fought in Italy in the 1800's",
         wrongAnswer: ["• Fuchsia", "• Capri", "• Olivine"],
         rightAnswer: "• Magenta",
+        // image: url("assets/images/rainbowq.jpg")
 
     },
     question2 = {

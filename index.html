@@ -47,6 +47,15 @@
             <div class="row" id="question-row">
                 <div class="col-12" id="question-column">
                     <h4 id="random-question"></h4>
+                </div>
+            </div>
+            <!-- options and image row -->
+            <div class="row" id="optionsImage-row">
+                <!-- Image -->
+                <div class="col-6" id="image-column">
+                    <div id="image-holder"></div>
+                </div>
+                <div class="col-6" id="multQuestion-column">
                     <!-- Multiple Choice Options -->
                     <ol id="answer-list">
                         <li id="answer-A"></li>
@@ -70,7 +79,6 @@
             <div class="row" id="answer-row">
                 <div class="col-12" id="answer-column">
                     <h4></h4>
-                    <img>
                 </div>
             </div>
         </div>
@@ -78,10 +86,14 @@
         <div class="container" id="results-container">
             <div class="row" id="results-row">
                 <div class="col-6" id="wins-column">
-
                 </div>
                 <div class="col-6" id="losses-column">
-
+                </div>
+            </div>
+            <!-- Play Again Button -->
+            <div class="row" id="reload-row">
+                <div class="col-12" id="reload-column">
+                    <button type="button" class="btn btn-info btn-lg" id="reload-button">Reload</button>
                 </div>
             </div>
         </div>
@@ -92,7 +104,7 @@
                     <!-- Copyright Text -->
                     <div class="col-6">
                         <p id="copyright-text">
-                            Copyright © AP Incorporated, 2019 - "The Useless Knowledge Trivia Game Background Music" is
+                            Copyright © AP Incorporated, 2019 - "The 'Useless Knowledge' Trivia Game Background Music" is
                             an
                             Original Composition
                             by DJ
@@ -102,7 +114,7 @@
                     <!-- Music -->
                     <div class="col-6" id="audio-wrapper">
                         <audio id="bgMusic" controls>
-                            <source src="assets/" type="audio/mpeg">
+                            <source src="assets/Trivia_Game_Soundtrack.mp3" type="audio/mpeg">
                         </audio>
                     </div>
                 </div>

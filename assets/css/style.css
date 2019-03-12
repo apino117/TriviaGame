@@ -1,3 +1,9 @@
+/* General */
+
+.clearfix {
+    overflow: auto;
+}
+
 body {
     color: whitesmoke;
     /* Setting Background Image */
@@ -11,9 +17,37 @@ body {
     margin-top: 96px;
 }
 
+h1 {
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    text-shadow: 2px 2px #3e0082;
+}
+
+h2, h3 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px #3e0082;
+}
+
+#tagline-text {
+    font-size: 28.25px;
+    font-style: italic;
+}
+
+/* Containers */
+
 #instructions-container, #tagline-text {
     padding-top: 25px;
 }
+
 #content-container {
     background: #ce3838;
     border-radius: 25px;
@@ -26,41 +60,35 @@ body {
     padding-bottom: 25px;
     padding-top: 15px;
     font-family: monospace;
-    font-size:25px;
+    font-size: 25px;
 }
 
+/* Rows  */
 .row {
     align-items: center;
 }
 
-h1 {
-    font-family: fantasy;
-    font-weight: bold;
-    font-size: 55px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    text-align: center;
-    text-shadow: 2px 2px #3e0082;
-
+#question-row {
+    margin-bottom: 25px;
 }
 
-h2, h3 {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 32px;
-    text-align: center;
-    color: whitesmoke;
-    text-shadow: 2px 2px #3e0082;
-}
+/* Questions */
 
 h4, li {
     font-family: monospace;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 33px;
     text-align: center;
     color: whitesmoke;
     text-shadow: 2px 2px #3e0082;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.75;
+    font-size: 22px;
+    text-align: left;
 }
 
 #random-question {
@@ -78,12 +106,35 @@ p {
 .footer {
     position: relative;
 }
+
 #audio-wrapper {
     padding-right: 340px;
 }
+
 #copyright-text {
     color: #fff8f8;
     text-shadow: 2px 2px #00000085;
     margin-left: 10px;
     margin-top: 20px;
 }
+
+/* Images */
+
+#image-holder {
+    /* Positioning */
+    margin: 0 auto;
+    /* Box-model */
+    width: 410px;
+    /* Typography */
+    text-align: center;
+    border: solid;
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+/* Play again button */
+
+#reload-row {
+    margin-top: 40px;
+}
+

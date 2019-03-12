@@ -216,7 +216,7 @@ if (gameisStarted = true) {
 }
 
 // Reload game
-$("#playAgain-button").on("click", function () {
+$("#reload-button").on("click", function () {
     // stop();
     // var questionCount = 0;
     // var correctAnswer = 0;

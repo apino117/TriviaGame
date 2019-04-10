@@ -10,4 +10,6 @@ To start press the start button and the first question will appear along with a 
 
 If you need any assistance or just have general questions speak them aloud, as that will be about as effective as this knowledge is.
 
+https://apino117.github.io/TriviaGame/
+
 ![ShruggingGif](assets/images/shrugging.gif) 
